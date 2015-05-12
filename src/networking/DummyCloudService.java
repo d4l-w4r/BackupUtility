@@ -33,6 +33,7 @@ public class DummyCloudService implements CloudService {
 	@Override
 	public boolean upload(File file) {
 		assert _loggedIn == true;
+	
 		int id = file.hashCode();
 		
 		try(FileInputStream fi = new FileInputStream(file);) {
